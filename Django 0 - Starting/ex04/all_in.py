@@ -21,8 +21,8 @@ def main():
         args = sys.argv[1].split(",")
         args = [arg.strip() for arg in args]
 
-        print(len(args))
-        print(args)
+        if '' in args:
+            return
 
         for arg in args:
             if arg.capitalize() in states:
