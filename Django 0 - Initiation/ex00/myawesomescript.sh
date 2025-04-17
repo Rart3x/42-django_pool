@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-url=$(curl -I "$1" 2>/dev/null | grep Location: | cut -d " " -f2- | tr -d '\r')
+url=$(curl -I "$1" 2>/dev/null | grep Location: | cut -d " " -f2-)
 
 if [ -z "$url" ]; then
     echo -e "${RED}No URL found${RESET}"
